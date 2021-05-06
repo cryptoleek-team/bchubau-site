@@ -39,8 +39,8 @@ export const NavLogo = styled(LinkS)`
   width: 100px;
   margin-left: 30px;
   img {
-    height: 135%;
-    margin-top: 8px;
+    height: 90%;
+    margin:5px;
   }
 
   @media screen and (max-width: 768px) {
