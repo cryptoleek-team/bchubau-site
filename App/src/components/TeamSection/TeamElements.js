@@ -16,10 +16,6 @@ export const TextWrapper = styled.div`
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-
-  @media screen and (max-width: 1440px) {
-    max-width: 90%;
-  }
 }
 `
 
@@ -51,37 +47,32 @@ export const Topline = styled.p`
 `
 
 export const CardBox = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    align-items:center;
-    justify-content:center;
-    margin-top:50px;
+    display: table;
+    width: 100%;
+    border-collapse:separate;
+    border-spacing:30px;
+
+    @media screen and (max-width: 768px) {
+      border-collapse:initial;
+      border-spacing:0px;
+    }
 `
 
 export const Card = styled.div`
     padding: 4.5em 2em 2em;
     margin: 30px;
+    display: table-cell;
     border: 1px solid #f7f8f9;
     color: #070808;
-    flex: 0 0 28%;
     background-color: #fff;
     box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
     position:relative;
-    height:500px;
-
-    @media screen and (min-device-width: 1024px) and (max-device-width: 1440px) {
-        flex: 0 0 40%;
-        height:420px;
-    }
-
-    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        flex: 0 0 40%;
-        height:550px;
-    }
+    width:33%;
 
     @media screen and (max-width: 768px) {
-        flex: 0 0 100%;
-        height:auto;
+      display:block;
+      width:100%;
+      margin:30px 0 80px 0;
     }
 `
 

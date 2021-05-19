@@ -46,12 +46,16 @@ export const TopLine = styled.p`
   }
 `
 export const CardBox = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    margin-top:50px;
+    display: table;
+    width: 100%;
+    border-collapse:separate;
+    border-spacing:30px;
+
+    @media screen and (max-width: 768px) {
+      border-collapse:initial;
+      border-spacing:0px;
+    }
+
 `
 
 export const Card = styled.div`
@@ -59,19 +63,16 @@ export const Card = styled.div`
     margin: 25px;
     border: 1px solid #f7f8f9;
     color: #070808;
-    flex: 0 0 40%;
+    display: table-cell;
     background-color: #fff;
     box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
     position:relative;
-    height:300px;
-
-    @media screen and (min-device-width: 768px) and (max-device-width: 1440px) {
-        height:400px;
-    }
+    width:40%;
 
     @media screen and (max-width: 768px) {
-        flex: 0 0 100%;
-        height:380px;
+      display:block;
+      width:100%;
+      margin:0 0 50px 0;
     }
 `
 

@@ -30,7 +30,8 @@ const TeamSection = ({c,id})=>{
                     <Topline data-aos="fade-down">{c.teamSubtitle}</Topline>
                 </div>
 
-                    <CardBox data-aos="fade-down">
+                <div data-aos="fade-down">
+                    <CardBox>
                         <Card>
                             <div>
                                  <CardImg src={protrait1}></CardImg>
@@ -61,7 +62,9 @@ const TeamSection = ({c,id})=>{
                             <Line></Line>
                             <CardDesc>{c.memberDesc3}</CardDesc>
                         </Card>
+                    </CardBox>
 
+                    <CardBox >
                         <Card>
                             <div>
                                  <CardImg src={protrait4}></CardImg>
@@ -93,6 +96,7 @@ const TeamSection = ({c,id})=>{
                             <CardDesc>{c.memberDesc6}</CardDesc>
                         </Card>
                     </CardBox>
+                </div>
             </TextWrapper>
         </TeamContainer>
     )
