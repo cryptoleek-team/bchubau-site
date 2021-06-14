@@ -134,6 +134,7 @@ export const Content = styled.p`
   font-size: 18px;
   line-height: 1.5;
   font-weight: 300;
+  text-align:center;
 
   @media screen and (max-width: 768px) {
     font-size: 12px;

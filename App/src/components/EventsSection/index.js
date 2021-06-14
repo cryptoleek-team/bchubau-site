@@ -20,12 +20,12 @@ import LoadingCard from "../Loading";
 
 const EventSection =({id,c})=>{
     const [events,setEvents] = useState([]);
-    const [isLoading, setisLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
     useEffect(()=>{
         const getEventsList = async()=>{
             const response = await getEventsData();
             setEvents(response);
-            setisLoading(false);
+            setIsLoading(false);
         };
         getEventsList();
     },[])
@@ -47,7 +47,7 @@ const EventSection =({id,c})=>{
             <EventContainer id={id}>
                 <TextWrapper>
                     <Heading>{c.eventTitle}</Heading>
-                    {
+                    {events?
                         events.map((item,index)=>(
                         <CardContainer key={index}>
                             <CardBox>
@@ -87,8 +87,7 @@ const EventSection =({id,c})=>{
                                 </div> 
                             </CardBox>
                         </CardContainer>
-
-                        ))
+                        )): ""
                     }
                 </TextWrapper>
             </EventContainer>

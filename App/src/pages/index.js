@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import InforSection from '../components/InforSection';
 import EventSection from '../components/EventsSection';
-import TeamSection from "../components/TeamSection"
+// import TeamSection from "../components/TeamSection"
 import Career from '../components/Career';
 import Footer from '../components/Footer';
 import contents from '../locales/contents.json';
@@ -32,7 +32,7 @@ const Home = () => {
       <HeroSection  id='home' c={contents}/>
       <InforSection id='about' c={contents}/>
       <EventSection id='events' c={contents} />
-      <TeamSection id="team" c={contents}/>
+      {/* <TeamSection id="team" c={contents}/> */}
       <Career id='career' c={contents}/> 
       <Footer />
     </>

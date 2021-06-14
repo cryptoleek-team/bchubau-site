@@ -74,7 +74,7 @@ const Navbar = ({ toggle, c }) => {
                   offset={-80}
                 >{c.events}</NavLinks>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLinks
                   to='team'
                   smooth={true}
@@ -83,7 +83,7 @@ const Navbar = ({ toggle, c }) => {
                   exact='true'
                   offset={-80}
                 >{c.team}</NavLinks>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLinks
                   to='career'

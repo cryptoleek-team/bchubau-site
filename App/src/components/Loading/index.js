@@ -12,7 +12,7 @@ const LoadingCard =()=>{
     return(
         <TextWrapper>
         {
-            Array(3)
+            Array(1)
                 .fill()
                 .map((item,index)=>(
                 <CardContainer key={index}>

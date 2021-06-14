@@ -1,6 +1,5 @@
 import React from 'react';
-import { FooterContain, FooterWrapper, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink } from './FooterElements';
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FooterContain, FooterWrapper, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights} from './FooterElements';
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -16,7 +15,7 @@ const Footer = () => {
             <SocialLogo to='/' onClick={toggleHome}>
               Level 4/447 Collins Street, Melbourne VIC 3000
             </SocialLogo>
-            <SocialIcons>
+            {/* <SocialIcons>
               <SocialIconLink href='//www.facebook.com' target='_blank' aria-label='Facebook'>
                 <FaFacebook />
               </SocialIconLink>
@@ -32,7 +31,7 @@ const Footer = () => {
               <SocialIconLink href='//www.linkedin.com' target='_blank' aria-label='Linkedin'>
                 <FaLinkedin />
               </SocialIconLink>
-            </SocialIcons>
+            </SocialIcons> */}
             <WebsiteRights>Australia Blockchain Hub © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
           </SocialMediaWrap>
         </SocialMedia>

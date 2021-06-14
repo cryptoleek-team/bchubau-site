@@ -14,8 +14,13 @@ exports.list = async(req,res,next)=>{
                 'Authorization': `Bearer ${token}` 
             }
         })
-        if(data){
-            for(i=0;i<3;i++){
+
+        if(data && data.events){
+            console.log(data.events);
+            for(i=0;i<data.events.length;i++){
+                if(i===3){
+                    break;
+                }
                 events.push({
                     "id":"00"+ (i + 1),
                     "name":data.events[i].name.text,

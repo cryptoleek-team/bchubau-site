@@ -18,10 +18,11 @@ import img1 from '../../images/Company.png';
 const Career = ({ id, c}) => {
   return (
     <SerContent id={id}>
-      <SerWrapper>
+      <SerWrapper >
         <h1>{c.join}</h1>
+        <div>
         <SerWrap >{c.joinSerwrap}</SerWrap>
-        <SerRow imgStart={true} data-aos="fade-in">
+        <SerRow imgStart={true}>
           <Column1>
             <Text>
               <Heading>{c.whyJoinUs}</Heading>
@@ -35,6 +36,7 @@ const Career = ({ id, c}) => {
           </Column2>
         </SerRow>
         <Content>{c.joinUsNow}</Content>
+        </div>
       </SerWrapper>
     </SerContent>
   )
