@@ -11,7 +11,7 @@ export const EventContainer = styled.div`
 `
 
 export const TextWrapper = styled.div`
-  max-width: 60%;
+  max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;

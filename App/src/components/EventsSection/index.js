@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     EventContainer,
     TextWrapper,
@@ -9,46 +9,44 @@ import {
     CardDesc,
     CardBox,
     Icon,
-    IconContainer
+    IconContainer,
+    SubHeading
 } from './EventElements';
-import {getEventsData} from '../../api/index';
-import {IoLocationOutline, IoPersonOutline} from 'react-icons/io5';
-import {FaRegCalendarCheck} from 'react-icons/fa';
-import {AiOutlineClockCircle} from 'react-icons/ai';
-import {Button} from "../ButtonElements"
+import { getEventsData } from '../../api/index';
+import { IoLocationOutline, IoPersonOutline } from 'react-icons/io5';
+import { FaRegCalendarCheck } from 'react-icons/fa';
+import { AiOutlineClockCircle } from 'react-icons/ai';
+import { GrInProgress } from 'react-icons/gr'
+import { Button } from "../ButtonElements"
 import LoadingCard from "../Loading";
+import PreviousEventSection from "./PreviousEvents"
 
-const EventSection =({id,c})=>{
-    const [events,setEvents] = useState([]);
+const EventSection = ({ id, c }) => {
+    const [events, setEvents] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    useEffect(()=>{
-        const getEventsList = async()=>{
+    useEffect(() => {
+        const getEventsList = async () => {
             const response = await getEventsData();
             setEvents(response);
             setIsLoading(false);
         };
         getEventsList();
-    },[])
+    }, [])
+
+    console.log(events)
 
     const newPage = (url) => {
-        const w=window.open('about:blank');
-        w.location.href= url;
+        const w = window.open('about:blank');
+        w.location.href = url;
     }
 
-    if(isLoading){
-        return(
-            <EventContainer>
-                <Heading>{c.eventTitle}</Heading>
-                <LoadingCard></LoadingCard>
-            </EventContainer>
-        )
-    }else{
-        return (
-            <EventContainer id={id}>
-                <TextWrapper>
-                    <Heading>{c.eventTitle}</Heading>
-                    {events?
-                        events.map((item,index)=>(
+    return (
+        <EventContainer id={id}>
+            <PreviousEventSection c={c}></PreviousEventSection>
+            <TextWrapper>
+                <Heading>{c.upcomingEventTitle}</Heading>
+                {isLoading ? <LoadingCard></LoadingCard> : (events.length > 0 ?
+                    events.map((item, index) => (
                         <CardContainer key={index}>
                             <CardBox>
                                 <CardImg src={item.img} alt="img"></CardImg>
@@ -56,43 +54,49 @@ const EventSection =({id,c})=>{
                                     <CardTitle>{item.name}</CardTitle>
                                     <IconContainer>
                                         <Icon>
-                                            <FaRegCalendarCheck/>
+                                            <FaRegCalendarCheck />
                                         </Icon>
                                         <CardDesc>{item.start}</CardDesc>
                                     </IconContainer>
 
                                     <IconContainer>
                                         <Icon>
-                                            <AiOutlineClockCircle/>
+                                            <AiOutlineClockCircle />
                                         </Icon>
                                         <CardDesc>{item.duration}</CardDesc>
                                     </IconContainer>
 
                                     <IconContainer>
                                         <Icon>
-                                            <IoLocationOutline/>
+                                            <IoLocationOutline />
                                         </Icon>
                                         <CardDesc>{item.location}</CardDesc>
                                     </IconContainer>
 
                                     <IconContainer>
                                         <Icon>
-                                            <IoPersonOutline/>
+                                            <IoPersonOutline />
                                         </Icon>
                                         <CardDesc>{item.capacity} Persons Capacity</CardDesc>
                                     </IconContainer>
+
+                                    <IconContainer>
+                                        <Icon>
+                                            <GrInProgress />
+                                        </Icon>
+                                        <CardDesc>{item.status} </CardDesc>
+                                    </IconContainer>
                                     <div>
-                                        <Button onClick={()=>newPage(item.url)}>Register</Button>
+                                        {item.status === "completed" ? <div></div> : <Button onClick={() => newPage(item.url)}>Register</Button>}
                                     </div>
-                                </div> 
+                                </div>
                             </CardBox>
                         </CardContainer>
-                        )): ""
-                    }
-                </TextWrapper>
-            </EventContainer>
-        )
-    }
+                    )) : <SubHeading>Coming Soon...</SubHeading>)
+                }
+            </TextWrapper>
+        </EventContainer>
+    )
 }
 export default EventSection
 

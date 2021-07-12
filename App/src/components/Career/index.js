@@ -12,30 +12,28 @@ import {
   Subtitle,
   ImgWrap
 } from './CareerElements';
-import img1 from '../../images/Company.png';
 
-
-const Career = ({ id, c}) => {
+const Career = ({ id, c }) => {
   return (
     <SerContent id={id}>
       <SerWrapper >
         <h1>{c.join}</h1>
         <div>
-        <SerWrap >{c.joinSerwrap}</SerWrap>
-        <SerRow imgStart={true}>
-          <Column1>
-            <Text>
-              <Heading>{c.whyJoinUs}</Heading>
-              <Subtitle>{c.whyJoinUsDesc}</Subtitle>
-            </Text>
-          </Column1>
-          <Column2>
-            <ImgWrap>
-              <img src={img1} alt='' />
-            </ImgWrap>
-          </Column2>
-        </SerRow>
-        <Content>{c.joinUsNow}</Content>
+          <SerWrap >{c.joinSerwrap}</SerWrap>
+          <SerRow imgStart={true}>
+            <Column1>
+              <Text>
+                <Heading>{c.whyJoinUs}</Heading>
+                <Subtitle>{c.whyJoinUsDesc}</Subtitle>
+              </Text>
+            </Column1>
+            <Column2>
+              <ImgWrap>
+                <img src="./images/Company.png" alt='' />
+              </ImgWrap>
+            </Column2>
+          </SerRow>
+          <Content>{c.joinUsNow}</Content>
         </div>
       </SerWrapper>
     </SerContent>

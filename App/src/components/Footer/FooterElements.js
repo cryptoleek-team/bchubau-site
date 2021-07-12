@@ -58,7 +58,7 @@ export const WebsiteRights = styled.small`
 
 export const SocialIcons = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 240px;
   margin-top: -10px;
@@ -67,5 +67,19 @@ export const SocialIcons = styled.div`
 export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 18px;
+`
+
+export const Email = styled.a`
+  color: #fff;
+  margin-left:10px;
+  margin-bottom:5px;
+  cursor:pointer;
+  font-size: 15px;
+  text-decoration: none;
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    margin-bottom:0px;
+  }
 `
 

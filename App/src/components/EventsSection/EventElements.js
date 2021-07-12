@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const EventContainer = styled.div`
   color: #f9f9f9;
   z-index: 11;
-  padding: 100px 0;
+  padding: 50px 0;
 
   @media screen and (max-width: 480px) {
     padding: 50px 0;
@@ -16,6 +16,7 @@ export const TextWrapper = styled.div`
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top:20px;
 
   @media screen and (max-width: 1440px) {
     max-width: 90%;
@@ -36,13 +37,25 @@ export const Heading = styled.h2`
   }
 `
 
+export const SubHeading = styled.h2`
+  margin-top: 25px;
+  font-size: 25px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #0a2663;
+  text-align: center;
+
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+  }
+`
+
 export const CardContainer = styled.div`
   border: 1px solid #f7f8f9;
   color: #070808;
   background-color: #fff;
   box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
   margin-top:20px;
-  
 `
 
 export const CardBox = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react';
-import { FooterContain, FooterWrapper, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights} from './FooterElements';
+import { FooterContain, FooterWrapper, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, Email } from './FooterElements';
 import { animateScroll as scroll } from 'react-scroll';
+import { HiOutlineMail } from 'react-icons/hi'
 
 const Footer = () => {
   const toggleHome = () => {
@@ -15,6 +16,10 @@ const Footer = () => {
             <SocialLogo to='/' onClick={toggleHome}>
               Level 4/447 Collins Street, Melbourne VIC 3000
             </SocialLogo>
+            <SocialIcons>
+              <HiOutlineMail style={{ color: "white" }} />
+              <Email href="mailto:auschainhub@gmail.com">auschainhub@gmail.com</Email>
+            </SocialIcons>
             {/* <SocialIcons>
               <SocialIconLink href='//www.facebook.com' target='_blank' aria-label='Facebook'>
                 <FaFacebook />
