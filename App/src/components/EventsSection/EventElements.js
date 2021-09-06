@@ -68,7 +68,6 @@ export const CardBox = styled.div`
   }
 
 `
-
 export const CardImg = styled.img`
     width:45%;
     height:300px;

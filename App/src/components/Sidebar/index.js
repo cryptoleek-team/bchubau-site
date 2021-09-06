@@ -16,11 +16,9 @@ const Sidebar = ({ isOpen, toggle, c }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to='home' onClick={toggle}>{c.home}</SidebarLink>
-          <SidebarLink to='about' onClick={toggle}>{c.about}</SidebarLink>
-          <SidebarLink to='events' onClick={toggle}>{c.events}</SidebarLink>
-          {/* <SidebarLink to='team' onClick={toggle}>{c.team}</SidebarLink> */}
-          <SidebarLink to='career' onClick={toggle}>{c.career}</SidebarLink>
+          <SidebarLink to='/' onClick={toggle}>{c.home}</SidebarLink>
+          <SidebarLink to='/allEvents' onClick={toggle}>{c.events}</SidebarLink>
+          <SidebarLink to='/token' onClick={toggle}>{c.events}</SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

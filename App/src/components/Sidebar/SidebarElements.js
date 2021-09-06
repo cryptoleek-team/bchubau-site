@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
-import { Link as LinkS } from 'react-scroll';
+import { NavLink } from "react-router-dom"
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -46,7 +46,7 @@ export const SidebarMenu = styled.ul`
   }
 `
 
-export const SidebarLink = styled(LinkS)`
+export const SidebarLink = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +59,7 @@ export const SidebarLink = styled(LinkS)`
   cursor: pointer;
 
   &:hover {
-    color: #e2c3ff;
+    color: #89c0fa;
     transition: 0.2s ease-in-out;
   }
 

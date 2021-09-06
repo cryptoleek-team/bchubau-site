@@ -2,8 +2,15 @@
     {
         "id": "001",
         "images": "./images/Events/001.jpeg",
-        "title": "Celebrating the first event by Australia Blockchain Hub",
+        "title": "Bitcoin, Defi, NFT",
         "description": "On the 8th. July. 2021, Australia Blockchain Hub has successfully organized its first face-to-face event at Stone & Chalk, a well-known start-up incubator in Melbourne CBD. Top-notch experts from various backgrounds including blockchain start-ups, technology, PR, law, and regulation etc...",
         "url": "https://medium.com/@frauyangle/celebrating-the-first-event-by-australia-blockchain-hub-1dffe23cb0a8"
+    },
+    {
+        "id": "002",
+        "images": "./images/Events/002.jpeg",
+        "title": "Chaos in the markets, where to go?",
+        "description": "On the 26th of Aug., 2021, Australia Blockchain Hub moved its face-to-face event to an online webinar due to the lockdown in Melbourne. Despite the longest lockdown this year in Melbourne, the webinar was registered by over 200 people and finally joined by nearly 90...",
+        "url": "https://elaine-yang.medium.com/on-the-26th-of-aug-6bd362144465"
     }
 ]
