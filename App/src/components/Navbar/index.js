@@ -10,6 +10,15 @@ import {
   NavItem,
   NavLinks,
 } from './NavbarElements';
+import { Button } from '../ButtonElements';
+import styled from 'styled-components';
+
+const StyledButton = styled(Button)`
+  font-weight:900;
+  font-size:25px;
+  width:120px;
+  margin:10px 0;
+`
 
 const Navbar = ({ toggle, c }) => {
   const [scrollNav, setScrollNav] = useState(false)
@@ -25,6 +34,12 @@ const Navbar = ({ toggle, c }) => {
   useEffect(() => {
     window.addEventListener('scroll', changeNav)
   }, [])
+
+
+  const newPage = () => {
+    const w = window.open('about:blank');
+    w.location.href = "https://cryptoleek-team.github.io/hub-dapp/"
+  }
 
   return (
     <>
@@ -56,6 +71,8 @@ const Navbar = ({ toggle, c }) => {
                   exact
                 >{c.token}</NavLinks>
               </NavItem>
+
+              <StyledButton onClick={newPage}>APP</StyledButton>
             </NavMenu>
           </NavbarContainer>
         </Nav>
