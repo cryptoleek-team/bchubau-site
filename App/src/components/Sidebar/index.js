@@ -35,7 +35,7 @@ const Sidebar = ({ isOpen, toggle, c }) => {
         <SidebarMenu>
           <SidebarLink to='/' onClick={toggle}>{c.home}</SidebarLink>
           <SidebarLink to='/allEvents' onClick={toggle}>{c.events}</SidebarLink>
-          <SidebarLink to='/token' onClick={toggle}>{c.events}</SidebarLink>
+          <SidebarLink to='/token' onClick={toggle}>{c.token}</SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
 
