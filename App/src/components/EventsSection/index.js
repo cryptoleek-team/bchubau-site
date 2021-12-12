@@ -45,7 +45,7 @@ const EventSection = ({ id, c }) => {
             <PreviousEventSection c={c}></PreviousEventSection>
             <TextWrapper>
                 <Heading>{c.upcomingEventTitle}</Heading>
-                {isLoading ? <LoadingCard></LoadingCard> : (events.length > 0 ?
+                {isLoading ? <LoadingCard /> : (events && events.length > 0 ?
                     events.map((item, index) => (
                         <CardContainer key={index}>
                             <CardBox>
